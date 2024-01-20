@@ -121,7 +121,7 @@ We will use this result to insert the right amount of redundant i.e. parity bits
 
 # Cryptography
 ## Definition and associated terms
-Cryptography is the study and practice of secure communication techniques wherein the message's contents can only be viewed by the sender(s) and intended receiver(s) (\textit{"kryptos" $\implies$ hidden (Greek)}). An interceptor is an unauthorised entity who can access the transmitted data (but may not be able to read the message itself).
+Cryptography is the study and practice of secure communication techniques wherein the message's contents can only be viewed by the sender(s) and intended receiver(s) (_"kryptos"_ $\implies$ _hidden_). An interceptor is an unauthorised entity who can access the transmitted data (but may not be able to read the message itself).
 
 ### Cryptosystem and its components}
 A cryptosystem (also called cipher system) is an implementation of cryptographic techniques, and involves the accompanying infrastructure. A basic cryptosystem has the following components:
