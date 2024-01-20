@@ -233,27 +233,27 @@ $m^{\lambda(p)} \equiv 1 \pmod p$
 
 $\implies (m^{\lambda(p)})^k \equiv 1^k \pmod p$
 
-$\implies m^{k\lambda(p)} \equiv 1 \pmod p$ ... (1)
+$\implies m^{k\lambda(p)} \equiv 1 \pmod p$ $\dots (1)$
 
 Also, we have the trivial congruence:
 
-$m \equiv m \pmod p$ ... (2)
+$m \equiv m \pmod p$ $\dots (2)$
 
 Hence, we get:
 
-$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
+$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ $\dots (3)$
 
 Similarly, we get:
 
-$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+ $ ... (4)
+$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+$ $\dots (4)$
 
 But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$
 
 Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in (\ref{eq3}) and $k=\frac{\lambda(n)}{\lambda(q)}$ in (\ref{eq4}):
 
-$m^{\lambda(n)+1} \equiv m \pmod p$ ... (5)
+$m^{\lambda(n)+1} \equiv m \pmod p$ $\dots (5)$
 
-$m^{\lambda(n)+1} \equiv m \pmod q$ ... (6)
+$m^{\lambda(n)+1} \equiv m \pmod q$ $\dots (6)$
 
 $(5), (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
 
@@ -268,7 +268,7 @@ Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in 
 
 But $1 < \lambda(n)$ and $1 \in Z_+$. Hence, by division algorithm:
 
-$1 = ed \bmod \lambda(n)$ ... (7)
+$1 = ed \bmod \lambda(n)$ $\dots (7)$
 
 Hence, $e$ and $d$ are the modular multiplicative inverses of each other modulo $\lambda(n)$.
 
@@ -292,7 +292,7 @@ Now, there is a result that states that:
 
 $ab \bmod c = (a \bmod c)(b \bmod c) \bmod c$
 
-Hence, from (1), we obtain the following:
+Hence, from $(1)$, we obtain the following:
 
 $m = (m^e)^d \bmod n$
 
@@ -390,26 +390,26 @@ Consider a set of alphabets that are mapped to a fixed set of indices (ASCII val
 Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha("a") \leq \alpha(c) \leq \alpha("z")$.
 
 #### CASE 1: $\alpha(c)+k \leq \alpha("z")$
-$\implies \alpha(d) = \alpha(c)+k$ ... (1)
+$\implies \alpha(d) = \alpha(c)+k$ $\dots (1)$
 
 #### CASE 2: $\alpha(c)+k > \alpha("z")$
-$implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ ... (2)
+$implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ $\dots (2)$
 
 **Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in:
 
 $\alpha(c)+k$
 
-But in case 2, $\alpha(c)+k > \alpha("z")$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha("z")$, and obtain the alphabet that has this offset from $"z"$, considering that $"z"$ is looped back to $"a"$. This process can be computationally expressed as equation (1).
+But in case 2, $\alpha(c)+k > \alpha("z")$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha("z")$, and obtain the alphabet that has this offset from $"z"$, considering that $"z"$ is looped back to $"a"$. This process can be computationally expressed as equation $(1)$.
 
 ### Decoding implementation
 Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha("a") \leq \alpha(d) \leq \alpha("z")$.
 
 #### CASE 1: $\alpha(c)+k \leq \alpha("z")$
-Hence, from the encoding implementation for this case i.e. equation (1), we get
+Hence, from the encoding implementation for this case i.e. equation $(1)$, we get
 
 $\alpha(d) = \alpha(c)+k$
 
-$ \implies \alpha(c) = \alpha(d) - k $ ... (3)
+$ \implies \alpha(c) = \alpha(d) - k $ $\dots (3)$
 <br><br>
 
 **Case 1 condition in terms of** $\alpha(d)$ ...
@@ -425,7 +425,7 @@ $\alpha("a") \leq \alpha(d) - k$<br>
 ... since $\alpha(d) - k < \alpha(d) \leq \alpha("z")$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
 
 #### CASE 2: $\alpha(c)+k > \alpha("z")$
-Hence, from the encoding implementation for this case i.e. equation (2), we get:
+Hence, from the encoding implementation for this case i.e. equation $(2)$, we get:
 
 $\alpha(d) = (\alpha(c)+k - \alpha("z") + \alpha("a") - 1$
 $\implies \alpha(c) = \alpha(d) - \alpha("a") + 1 - k + \alpha("z")$
