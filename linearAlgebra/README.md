@@ -17,7 +17,7 @@
     - `V.M`: Matrices as vectors of vectors
     - `V.VS`: Vector spaces
         - `V.VS.Dim`: Dimensions of a vector space (_in every interpretation, i.e. every context_)
-        - `V.VS.B`: Basis of a vector space
+        - `V.VS.B`: Basis of a vector space<br> **KEY POINT**: _Every vector of the vector space is a linear combination of the basis vectors_
         - `LT~V.VS`: Linear transformations as transformations of vector spaces
             - Representing a LT as a transformation of basis vectors
             - Reducing the dimensionality of a vector space through LT
@@ -53,7 +53,7 @@ Matrices are deeply tied to linear transformations, so always consider matrix-re
 
 Generalising linear transformation topics...
 
-- `LT`: Linear transformation (general concepts)<br> **NOTE**: We shall take for granted that LT's are represented as matrices
+- `LT`: Linear transformation (general concepts)<br> **NOTE**: _We shall take for granted that LT's are represented as matrices_
     - **REFERENCE FOR INTUITION**: [Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra](https://www.youtube.com/watch?v=uQhTuRlWMxw)
     - `LT.base`: Representing LT as a matrix
     - `LT.Rank`: Rank of a matrix a.k.a. rank of a LT
