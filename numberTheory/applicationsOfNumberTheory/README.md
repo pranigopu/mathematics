@@ -396,9 +396,7 @@ $\implies \alpha(d) = \alpha(c)+k$ $\dots (1)$
 #### CASE 2: $\alpha(c)+k > \alpha($ "z" $)$
 $\implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha($ "a" $) - 1$ $\dots (2)$
 
-**Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in:
-
-$\alpha(c)+k$
+**Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in $\alpha(c)+k$.
 
 But in case 2, $\alpha(c)+k > \alpha($ "z" $)$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha($ "z" $)$, and obtain the alphabet that has this offset from "z", considering that "z" is looped back to "a". This process can be computationally expressed as equation $(1)$.
 
