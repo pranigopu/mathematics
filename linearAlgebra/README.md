@@ -54,6 +54,7 @@ Matrices are deeply tied to linear transformations, so always consider matrix-re
 Generalising linear transformation topics...
 
 - `LT`: Linear transformation (general concepts)<br> **NOTE**: We shall take for granted that LT's are represented as matrices
+    - **REFERENCE FOR INTUITION**: [Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra](https://www.youtube.com/watch?v=uQhTuRlWMxw)
     - `LT.base`: Representing LT as a matrix
     - `LT.Rank`: Rank of a matrix a.k.a. rank of a LT
     - `LT.CS`: Column space of a matrix<br> _Essentially, the span of the transformed basis vectors, i.e. the columns_
