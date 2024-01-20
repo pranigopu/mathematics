@@ -59,7 +59,7 @@ Generalising linear transformation topics...
     - `LT.base`: Basics
         - LT as a function defined on a vector space
         - Representing LT as a transformation of the basis vectors
-        - Representing LT as a matrix
+        - Representing LT as a matrix (_directly related to the above_)
     - `LT.Rank`: Rank of a matrix a.k.a. rank of a LT
     - `LT.CS`: Column space of a matrix<br> _Essentially, the span of the transformed basis vectors, i.e. the columns_
         - `LT.Rank~LT.CS`: _Rank is the number of dimensions in the column space_
