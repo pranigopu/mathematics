@@ -1,6 +1,6 @@
 # Applications of Number Theory
 
-Pranav Gopalkrishna, 1940223
+_Project by Pranav Gopalkrishna_
 
 # Pseudorandom numbers
 ## Random numbers
