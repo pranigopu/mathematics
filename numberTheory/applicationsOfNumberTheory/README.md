@@ -237,11 +237,11 @@ $m \equiv m \pmod p$ $\dots (2)$
 
 Hence, we get:
 
-$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ $\dots (3)$
+$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in \mathbb{Z}_ +$ $\dots (3)$
 
 Similarly, we get:
 
-$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+$ $\dots (4)$
+$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in \mathbb{Z}_ +$ $\dots (4)$
 <br><br>
 
 But we have that:
@@ -263,10 +263,10 @@ $\implies pq | (m^{\lambda(n)+1} - m)$
 
 $\implies m^{k\lambda(n)+1} \equiv m \pmod {pq}$
 
-Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in Z_+$.
+Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in \mathbb{Z}_ +$.
 <br><br>
 
-But $1 < \lambda(n)$ and $1 \in Z_+$. Hence, by division algorithm:
+But $1 < \lambda(n)$ and $1 \in \mathbb{Z}_ +$. Hence, by division algorithm:
 
 $1 = ed \bmod \lambda(n)$ $\dots (7)$
 
@@ -280,11 +280,11 @@ The encryption will be based made on $e$, but what should the encryption functio
 
 $\implies n | (m^e)^d - m$
 
-$\implies (m^e)^d - m = kn, k \in Z_+$
+$\implies (m^e)^d - m = kn, k \in \mathbb{Z}_ +$
 
-$\implies (m^e)^d = kn + m, k \in Z_+$
+$\implies (m^e)^d = kn + m, k \in \mathbb{Z}_ +$
 
-But $m < n$ and $m \in Z_+$. Hence, by division algorithm:
+But $m < n$ and $m \in \mathbb{Z}_ +$. Hence, by division algorithm:
 
 $m = (m^e)^d \bmod n ... (1)$
 <br><br>
@@ -371,41 +371,41 @@ This is the simplest letter coding rule. Here, given a definite order of alphabe
 ### Python implementation
 For our implementation of Caesar cipher in Python, we make the following considerations
 
-- We are dealing with ASCII values, so $``z" = 122$, $``Z" = 90$
-- If character is uppercase, choose $``Z"$ as the last alphabet
-- If character is lowercase, choose $``z"$ as the last alphabet
+- We are dealing with ASCII values, so "z" $= 122$, "Z" $= 90$
+- If character is uppercase, choose "Z" as the last alphabet
+- If character is lowercase, choose "z" as the last alphabet
 
 #### Assumptions, definitions and notations
 Our very first assumption in this implementation is that the message to be coded is in regular English, with special characters or alphabets not being considered as part of the alphabet. Note that Caesar cipher can be designed to suit different languages and use cases.
 <br><br>
 
-Note that we assume that the offset, which we shall denote as $k$, is such that $k \in Z_+, k < n$ (assuming we have $n$ possible letters), since due to the circular nature of Caesar cipher, any offset $k \geq n$ can be converted into a functionally identical offset $k \in Z_+, k < n$ using modulo $n$ i.e. doing $k_{new}=k_{old} \bmod n$.
+Note that we assume that the offset, which we shall denote as $k$, is such that $k \in \mathbb{Z}_ +, k < n$ (assuming we have $n$ possible letters), since due to the circular nature of Caesar cipher, any offset $k \geq n$ can be converted into a functionally identical offset $k \in \mathbb{Z}_ +, k < n$ using modulo $n$ i.e. doing $k_{new}=k_{old} \bmod n$.
 <br><br>
 
 Note that due to the very definition of Caesar cipher, we map the letters to be coded and decoded to a fixed set of numerical indices (i.e. natural numbers separated by 1). For example, in regular English alphabets, we may give "a" = 1, "b = 2... "z" = 26. The ASCII values of English alphabets also form a mapping between letters and a fixed set of indices, if we consider uppercase and lowercase alphabets separately. The ASCII values of alphabets are what we will be using in our Python implementation. Non-English alphabets will remain untouched in our algorithm.
 <br><br>
 
-Consider a set of alphabets that are mapped to a fixed set of indices (ASCII values). Define $\alpha$ as the function that returns the index (ASCII value) of an alphabet. Denote any alphabet in the string as $c$, denote as $d$ as the Caesar cipher of $c$, and denote $k \in Z_+$ as the offset. For simplicity of explanation, let $c$ be lowercase. Note that the same logic will apply for uppercase too.
+Consider a set of alphabets that are mapped to a fixed set of indices (ASCII values). Define $\alpha$ as the function that returns the index (ASCII value) of an alphabet. Denote any alphabet in the string as $c$, denote as $d$ as the Caesar cipher of $c$, and denote $k \in \mathbb{Z}_ +$ as the offset. For simplicity of explanation, let $c$ be lowercase. Note that the same logic will apply for uppercase too.
 
 ### Encoding implementation
-Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha("a") \leq \alpha(c) \leq \alpha("z")$.
+Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha($"a"$) \leq \alpha(c) \leq \alpha($"z"$)$.
 
-#### CASE 1: $\alpha(c)+k \leq \alpha("z")$
+#### CASE 1: $\alpha(c)+k \leq \alpha($"z"$)$
 $\implies \alpha(d) = \alpha(c)+k$ $\dots (1)$
 
-#### CASE 2: $\alpha(c)+k > \alpha("z")$
-$\implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ $\dots (2)$
+#### CASE 2: $\alpha(c)+k > \alpha($"z"$)$
+$\implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha($"a"$) - 1$ $\dots (2)$
 
 **Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in:
 
 $\alpha(c)+k$
 
-But in case 2, $\alpha(c)+k > \alpha("z")$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha("z")$, and obtain the alphabet that has this offset from $"z"$, considering that $"z"$ is looped back to $"a"$. This process can be computationally expressed as equation $(1)$.
+But in case 2, $\alpha(c)+k > \alpha($"z"$)$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha($"z"$)$, and obtain the alphabet that has this offset from "z", considering that "z" is looped back to "a". This process can be computationally expressed as equation $(1)$.
 
 ### Decoding implementation
-Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha("a") \leq \alpha(d) \leq \alpha("z")$.
+Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha("a") \leq \alpha(d) \leq \alpha($"z"$)$.
 
-#### CASE 1: $\alpha(c)+k \leq \alpha("z")$
+#### CASE 1: $\alpha(c)+k \leq \alpha($"z"$)$
 Hence, from the encoding implementation for this case i.e. equation $(1)$, we get
 
 $\alpha(d) = \alpha(c)+k$
@@ -416,32 +416,32 @@ $\implies \alpha(c) = \alpha(d) - k$ $\dots (3)$
 
 **Case 1 condition in terms of** $\alpha(d)$ ...
 
-Now, note that by its very nature, $\alpha("a") \leq \alpha(c) \leq \alpha("z")$
+Now, note that by its very nature, $\alpha("a") \leq \alpha(c) \leq \alpha($"z"$)$
 
-$\implies \alpha("a") \leq \alpha(d) - k  \leq \alpha("z")$
+$\implies \alpha($"a"$) \leq \alpha(d) - k  \leq \alpha($"z"$)$
 
-Since $\alpha("a") \leq \alpha(d) \leq \alpha("z")$, the above condition, simply becomes...
+Since $\alpha($"a"$) \leq \alpha(d) \leq \alpha($"z"$)$, the above condition, simply becomes...
 
-$\alpha("a") \leq \alpha(d) - k$<br>
+$\alpha($"a"$) \leq \alpha(d) - k$<br>
 
-... since $\alpha(d) - k < \alpha(d) \leq \alpha("z")$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
+... since $\alpha(d) - k < \alpha(d) \leq \alpha($"z"$)$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
 
-#### CASE 2: $\alpha(c)+k > \alpha("z")$
+#### CASE 2: $\alpha(c)+k > \alpha($"z"$)$
 Hence, from the encoding implementation for this case i.e. equation $(2)$, we get:
 
-$\alpha(d) = (\alpha(c)+k - \alpha("z") + \alpha("a") - 1$
-$\implies \alpha(c) = \alpha(d) - \alpha("a") + 1 - k + \alpha("z")$
+$\alpha(d) = (\alpha(c)+k - \alpha($"z"$) + \alpha($"a"$) - 1$
+$\implies \alpha(c) = \alpha(d) - \alpha($"a"$) + 1 - k + \alpha($"z"$)$
 
 ---
 
-**Case 2 condition in terms of(( $\alpha(d)$} ...<br>
+**Case 2 condition in terms of $\alpha(d)$ ...<br>
 Now, note that the condition of case 2 is mutually exclusive from the condition of case 1 i.e. if condition of case 2 is true, condition of case 1 cannot be true. Now, from case 1, we got the equivalent condition in terms of $\alpha(d)$ as<br>
 
-$\alpha("a") \leq \alpha(d) - k$
+$\alpha($"a"$) \leq \alpha(d) - k$
 
 Hence, this condition must be mutually exclusive from the equivalent condition of case 2 in terms of $\alpha(d)$. Hence, the condition of case 2 in terms of $\alpha(d)$ must be:
 
-$\alpha("a") > \alpha(d) - k$
+$\alpha($"a"$) > \alpha(d) - k$
 
 Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place. In any case, in the Python implementation, a mutually exclusive condition can be obtained by simply using "else".
 
