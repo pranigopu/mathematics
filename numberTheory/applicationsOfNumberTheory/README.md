@@ -213,11 +213,10 @@ If $x$ is prime, $\lambda(x)=x-1$
 If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then
 
 $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
-<br><br>
 
-We will use this function and the above results to obtain a suitable $e$.
+---
 
-Consider...
+We will use this function and the above results to obtain a suitable $e$. Consider...
 
 - $p$ and $q$ are primes, hence $\lambda(p)=p-1$ and $\lambda(q)=q-1$
 - $p \nmid m \implies m^{p-1} \equiv 1 \pmod p$ (by Fermat's little theorem)
@@ -225,7 +224,7 @@ Consider...
 - From the above, we get $m^{\lambda(p)} \equiv 1 \pmod p$ and $m^{\lambda(q)} \equiv 1 \pmod q$
 - $n=pq \implies \lambda(n) = \lambda(pq) = LCM(\lambda(p), \lambda(q))$
 
-<br>
+---
 
 Now consider $m^{\lambda(p)} \equiv 1 \pmod p$ alone...
 
@@ -234,6 +233,7 @@ $m^{\lambda(p)} \equiv 1 \pmod p$
 $\implies (m^{\lambda(p)})^k \equiv 1^k \pmod p$
 
 $\implies m^{k\lambda(p)} \equiv 1 \pmod p$ $\dots (1)$
+<br><br>
 
 Also, we have the trivial congruence:
 
@@ -248,7 +248,11 @@ Similarly, we get:
 $m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+$ $\dots (4)$
 <br><br>
 
-But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$. Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in $(3)$ and $k=\frac{\lambda(n)}{\lambda(q)}$ in $(4)$:
+But we have that:
+
+$\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$
+
+Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in $(3)$ and $k=\frac{\lambda(n)}{\lambda(q)}$ in $(4)$:
 
 $m^{\lambda(n)+1} \equiv m \pmod p$ $\dots (5)$
 
@@ -287,6 +291,7 @@ $\implies (m^e)^d = kn + m, k \in Z_+$
 But $m < n$ and $m \in Z_+$. Hence, by division algorithm:
 
 $m = (m^e)^d \bmod n ... (1)$
+<br><br>
 
 Now, there is a result that states that:
 
@@ -322,7 +327,7 @@ A barcode can contain various useful information in a compact manner. A common u
 
 ## Barcode components
 
-<img src="numberTheory/applicationsOfNumberTheory/barcodeComponents.png">
+![Barcode components](https://github.com/pranigopu/mathematics/blob/315624261ff886056937bfcaa75baaeb6ca542fe/numberTheory/applicationsOfNumberTheory/barcodeComponents.png)
 
 A quiet zone is blank margin located at both ends of the barcode. The minimum margin space is 2.5 mm. The quiet zone adds a constant reflection at either end of the barcode, allowing the scanner to clearly identify the start and end of a barcode. If the width of a quiet zone is insufficient, barcodes can be hard for a scanner to read. 
 <br><br>
@@ -410,7 +415,8 @@ Hence, from the encoding implementation for this case i.e. equation $(1)$, we ge
 $\alpha(d) = \alpha(c)+k$
 
 $\implies \alpha(c) = \alpha(d) - k$ $\dots (3)$
-<br><br>
+
+---
 
 **Case 1 condition in terms of** $\alpha(d)$ ...
 
@@ -429,7 +435,8 @@ Hence, from the encoding implementation for this case i.e. equation $(2)$, we ge
 
 $\alpha(d) = (\alpha(c)+k - \alpha("z") + \alpha("a") - 1$
 $\implies \alpha(c) = \alpha(d) - \alpha("a") + 1 - k + \alpha("z")$
-<br><br>
+
+---
 
 **Case 2 condition in terms of(( $\alpha(d)$} ...<br>
 Now, note that the condition of case 2 is mutually exclusive from the condition of case 1 i.e. if condition of case 2 is true, condition of case 1 cannot be true. Now, from case 1, we got the equivalent condition in terms of $\alpha(d)$ as<br>
@@ -445,6 +452,6 @@ Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decodi
 ## Randomised or arbitrary one-to-one coding
 Here, a symbol is mapped to another symbol without using a generalised rule, such that the mapping is one-to-one. Hence, the to code and decode using this method, we need to define and refer to a specified mapping table. However, when it comes to coding a natural language (ex. English), decoding can be done by analysing the frequencies of the symbols in the message. This works, because many languages tend to use certain letters more than others, in general. For example, in English, the most commonly used letter is 'e', followed by 't'. Given below is a relative usage frequency distribution of the occurrence of alphabets in the words listed in the main entries of the Concise Oxford Dictionary  (9th edition, 1995) (_relative frequency of letter means the the proportion of the usage of the letter, rather than the total count_).
 
-<img src="numberTheory/applicationsOfNumberTheory/englishLetterFrequencies.png">
+![EnglishLetterFrequencies](https://github.com/pranigopu/mathematics/blob/d9a65e5f60fa6afb8e42ed2ebba07bfa8dc220e9/numberTheory/applicationsOfNumberTheory/englishLetterFrequencies.png)
 
 Using such information about a language's usage, and knowing the source language of a cipher, an arbitrary one-to-one coding can be cracked relatively easily.
