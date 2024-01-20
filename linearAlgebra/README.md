@@ -2,7 +2,7 @@
 
 ## Conceptual map
 
-- `V`: Vectors & matrices
+- `V`: Vectors
     - `V.base`: General definition of vector & specific interpretations
         - Physics context (_relative change in position_)
         - Computer science & data science context (_ordered list of values_)
