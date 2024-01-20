@@ -30,7 +30,7 @@
         - Matrix multiplication (_ordered sequence of linear combinations of multiple vectors_)
     - `LT~M`: Linear transformations as matrices
         - Representing a LT as a matrix
-        - Obtaining a vector's LT with matrix multiplication
+        - Linearly transforming a vector with matrix multiplication
         - Relating function composition to composition of LT's to composition of matrices
     - `M.Det`: Determinant
         - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_
