@@ -403,7 +403,7 @@ $\alpha(c)+k$
 But in case 2, $\alpha(c)+k > \alpha($ "z" $)$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha($ "z" $)$, and obtain the alphabet that has this offset from "z", considering that "z" is looped back to "a". This process can be computationally expressed as equation $(1)$.
 
 ### Decoding implementation
-Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha("a") \leq \alpha(d) \leq \alpha($ "z" $)$.
+Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha($ "a" $) \leq \alpha(d) \leq \alpha($ "z" $)$.
 
 #### CASE 1: $\alpha(c)+k \leq \alpha($ "z" $)$
 Hence, from the encoding implementation for this case i.e. equation $(1)$, we get
@@ -416,7 +416,7 @@ $\implies \alpha(c) = \alpha(d) - k$ $\dots (3)$
 
 **Case 1 condition in terms of** $\alpha(d)$ ...
 
-Now, note that by its very nature, $\alpha("a") \leq \alpha(c) \leq \alpha($ "z" $)$
+Now, note that by its very nature, $\alpha($ "a" $) \leq \alpha(c) \leq \alpha($ "z" $)$
 
 $\implies \alpha($ "a" $) \leq \alpha(d) - k  \leq \alpha($ "z" $)$
 
