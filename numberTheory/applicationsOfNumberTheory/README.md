@@ -249,7 +249,7 @@ $m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+$ $\dots (4)$
 
 But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$
 
-Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in (\ref{eq3}) and $k=\frac{\lambda(n)}{\lambda(q)}$ in (\ref{eq4}):
+Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in $(3)$ and $k=\frac{\lambda(n)}{\lambda(q)}$ in $(4)$:
 
 $m^{\lambda(n)+1} \equiv m \pmod p$ $\dots (5)$
 
@@ -311,7 +311,7 @@ Hence, we can obtain the original message (in integer form) $m$ using $n$ and $d
 Note that the RSA encryption and decryption method as formulated above requires the $m < n$, where $m$ is the positive integer form of the message. In the proofs and derivations given above, we saw that this condition is necessary to ensure that the original message's integer can be obtained from the encrypted message's integer using the RSA method.
 <br><br>
 
-However, sometimes, the message string is too large. More specifically, using a given string-to-integer conversion method, a given message string cannot be converted into a positive integer $m$ such that $m<n$. In such cases, we generally partition the message into number of equally-sized partitions (the last partition's size may be lesser) that are sufficiently small. These partitions must be ordered, so that the complete message can be pieced together by combining the partitions in the same order.
+However, sometimes, the message string is too large. More specifically, using a given string-to-integer conversion method, a given message string cannot be converted into a positive integer $m$ such that $m < n$. In such cases, we generally partition the message into number of equally-sized partitions (the last partition's size may be lesser) that are sufficiently small. These partitions must be ordered, so that the complete message can be pieced together by combining the partitions in the same order.
 
 # Barcode scanning
 ## Barcode definition and purpose
