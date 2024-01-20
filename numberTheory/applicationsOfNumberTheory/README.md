@@ -204,11 +204,11 @@ Now, note that we from this, we can derive a result that states that for any two
 #### Using the Carmichael function
 The Carmichael function of any positive integer $x$, denoted by $\lambda(x)$, is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a < x$ that is coprime to $x$. Note the following results for Carmichael function:
 
-1.
+**Result 1**:
 
 If $x$ is prime, $\lambda(x)=x-1$
 
-2.
+**Result 2**:
 
 If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then
 
@@ -216,8 +216,8 @@ $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
 <br><br>
 
 We will use this function and the above results to obtain a suitable $e$.
-Consider...
 
+Consider...
 
 - $p$ and $q$ are primes, hence $\lambda(p)=p-1$ and $\lambda(q)=q-1$
 - $p \nmid m \implies m^{p-1} \equiv 1 \pmod p$ (by Fermat's little theorem)
@@ -255,14 +255,13 @@ $m^{\lambda(n)+1} \equiv m \pmod p$ ... (5)
 
 $m^{\lambda(n)+1} \equiv m \pmod q$ ... (6)
 
-$(5) and  (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
+$(5) \& (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
 
 But $p$ and $q$ are distinct primes, hence are coprime to each other:
 
 $\implies pq | (m^{\lambda(n)+1} - m)$
 
 $\implies m^{k\lambda(n)+1} \equiv m \pmod {pq}$
-<br><br>
 
 Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in Z_+$.
 
@@ -284,7 +283,7 @@ $\implies (m^e)^d - m = kn, k \in Z_+$
 
 $\implies (m^e)^d = kn + m, k \in Z_+$
 
-But $m<n$ and $m \in Z_+$. Hence, by division algorithm:
+But $m < n$ and $m \in Z_+$. Hence, by division algorithm:
 
 $m = (m^e)^d \bmod n ... (1)$
 
@@ -301,7 +300,6 @@ $m = (m^e)(m^e)...(m^e) \bmod n$
 $m = (m^e \bmod n)(m^e \bmod n)...(m^e \bmod n) \bmod n$
 
 $m = (m^e \bmod n)^d \bmod n$
-<br><br>
 
 Hence, we can obtain the original message (in integer form) $m$ using $n$ and $d$ i.e. using the decryption key by applying $(m^e \bmod n)^d \bmod n$. But note that $m^e \bmod n$ is obtained using only $n$ and $e$ i.e. using only the encryption key. Hence, we obtain the following...
 
