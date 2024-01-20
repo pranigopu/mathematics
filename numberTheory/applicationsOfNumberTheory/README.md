@@ -255,7 +255,7 @@ $m^{\lambda(n)+1} \equiv m \pmod p$ $\dots (5)$
 
 $m^{\lambda(n)+1} \equiv m \pmod q$ $\dots (6)$
 
-$(5), (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
+$(5), (6) \implies p | (m^{\lambda(n)+1} - m)$ where $q | (m^{\lambda(n)+1} - m) $
 
 But $p$ and $q$ are distinct primes, hence are coprime to each other:
 
