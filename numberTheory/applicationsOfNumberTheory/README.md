@@ -246,16 +246,16 @@ $(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ $\dots
 Similarly, we get:
 
 $m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+$ $\dots (4)$
+<br><br>
 
-But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$
-
-Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in $(3)$ and $k=\frac{\lambda(n)}{\lambda(q)}$ in $(4)$:
+But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$. Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in $(3)$ and $k=\frac{\lambda(n)}{\lambda(q)}$ in $(4)$:
 
 $m^{\lambda(n)+1} \equiv m \pmod p$ $\dots (5)$
 
 $m^{\lambda(n)+1} \equiv m \pmod q$ $\dots (6)$
 
 $(5), (6) \implies p | (m^{\lambda(n)+1} - m)$ where $q | (m^{\lambda(n)+1} - m) $
+<br><br>
 
 But $p$ and $q$ are distinct primes, hence are coprime to each other:
 
