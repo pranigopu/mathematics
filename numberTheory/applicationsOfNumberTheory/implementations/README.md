@@ -3,9 +3,9 @@
 The implementations contained in this directory are:
 
 - Pseudorandom number generator (pRNG)
-- Hash function
+- Hash functions
 - Parity bit basics
 - Parity bit using Hamming code
 - RSA algorithm demonstration
 - Barcode check digit finder
-- Caesar cipher encoding & decoding
+- Caesar cipher
