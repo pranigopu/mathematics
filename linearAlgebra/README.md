@@ -49,6 +49,7 @@ Matrices are deeply tied to linear transformations, so always consider matrix-re
         - `M.SoE~LT`: SoE as finding the preimage of a vector w.r.t. a LT<br> _Looking for the vector(s) that is mapped by the LT to the given vector_
         - Zero determinant & possible solutions given coefficient <br> _Connect with LT_
         - Specifying zero determinant cases using _rank_ <br> _Connect with LT_
+        - Obtaining the solution of a SoE using the inverse of the coefficient matrix
 
 Generalising linear transformation topics...
 
@@ -59,4 +60,6 @@ Generalising linear transformation topics...
         - `LT.Rank~LT.CS`: _Rank is the number of dimensions in the column space_
         - "Full rank" matrix $\implies$ Rank equals the number of columns $\implies$ Maximum dimensions for the column space
     - `LT.DimRed`: Dimensionality reduction of vector space with LT
-    - `LT.NS`: Nullspace of a matrix a.k.a. nullspace of a LT<br> _... related to_ `LT.DimRed`<br> _In essence, it is the set of vectors that get mapped by the LT to a null vector, i.e. the origin_
+    - `LT.NS`: Nullspace of a matrix a.k.a. nullspace of a LT<br> _... related to_ `LT.DimRed`
+        - _The set of vectors that get mapped by the LT to a null vector, i.e. the origin_
+        - _The set of all solution to a homogenous system of equations represented by the matrix_
