@@ -56,7 +56,10 @@ Generalising linear transformation topics...
 
 - `LT`: Linear transformation (general concepts)<br> **NOTE**: _We shall take for granted that LT's are represented as matrices_
     - **REFERENCE FOR INTUITION**: [Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra](https://www.youtube.com/watch?v=uQhTuRlWMxw)
-    - `LT.base`: Representing LT as a matrix
+    - `LT.base`: Basics
+        - LT as a function defined on a vector space
+        - Representing LT as a transformation of the basis vectors
+        - Representing LT as a matrix
     - `LT.Rank`: Rank of a matrix a.k.a. rank of a LT
     - `LT.CS`: Column space of a matrix<br> _Essentially, the span of the transformed basis vectors, i.e. the columns_
         - `LT.Rank~LT.CS`: _Rank is the number of dimensions in the column space_
