@@ -1,5 +1,7 @@
 # Linear algebra
 
+**NOTE**: `A~B` $\implies$ `A` with respect to `B`
+
 ## Conceptual map
 
 - `V`: Vectors
