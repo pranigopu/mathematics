@@ -10,10 +10,7 @@ A random number is a measurement taken from a random i.e. non-deterministic proc
 - Any past value has no effect in determining the current value (independence)
 
 ## Pseudorandom numbers
-In theory, due to causality, a truly random process may not exist. In practice, randomness is determined by unpredictability from a realistic perspective, where there are constraints on time and computational capacity. Hence, if a sequence possesses a sufficiently complicated pattern (often involving too many unaccountable factors) such that this pattern cannot or will not be realistically determined in a given situation, it may be considered random.
-<br><br>
-
-Computation is a deterministic process, hence its results are predictable, fundamentally. However, at a sufficient complexity, a computational process and its results can be practically unpredictable for the given purposes.
+In theory, due to causality, a truly random process may not exist. In practice, randomness is determined by unpredictability from a realistic perspective, where there are constraints on time and computational capacity. Hence, if a sequence possesses a sufficiently complicated pattern (often involving too many unaccountable factors) such that this pattern cannot or will not be realistically determined in a given situation, it may be considered random. Computation is a deterministic process, hence its results are predictable, fundamentally. However, at a sufficient complexity, a computational process and its results can be practically unpredictable for the given purposes.
 
 ## Pseudorandom number generation (pRNG)
 pRNG involves one arbitrary input, known as the seed. The seed is the starting point of the pRNG, and may be the starting point of the sequence itself. A computational (mathematical) algorithm is applied in the seed to generate the pseudorandom sequence one number at a time. This process is usually recursive (i.e. using the previously generated number as an input to generate the next number), but it may simply a function of the seed, which is not preferred, since such a pattern is usually easier to crack.
