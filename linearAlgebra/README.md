@@ -64,4 +64,4 @@ Generalising linear transformation topics...
     - `LT.DimRed`: Dimensionality reduction of vector space with LT
     - `LT.NS`: Nullspace of a matrix a.k.a. nullspace of a LT<br> _... related to_ `LT.DimRed`
         - _The set of vectors that get mapped by the LT to a null vector, i.e. the origin_
-        - _The set of all solution to a homogenous system of equations represented by the matrix_
+        - `LT.NS~M.SoE`: _The set of all solution to a homogenous system of equations represented by the matrix_
