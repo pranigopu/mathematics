@@ -321,7 +321,7 @@ A barcode can contain various useful information in a compact manner. A common u
 
 ## Barcode components
 
-![Barcode components]((https://github.com/pranigopu/mathematics/blob/315624261ff886056937bfcaa75baaeb6ca542fe/numberTheory/applicationsOfNumberTheory/barcodeComponents.png)
+![Barcode components](https://github.com/pranigopu/mathematics/blob/315624261ff886056937bfcaa75baaeb6ca542fe/numberTheory/applicationsOfNumberTheory/barcodeComponents.png)
 
 A quiet zone is blank margin located at both ends of the barcode. The minimum margin space is 2.5 mm. The quiet zone adds a constant reflection at either end of the barcode, allowing the scanner to clearly identify the start and end of a barcode. If the width of a quiet zone is insufficient, barcodes can be hard for a scanner to read. 
 <br><br>
@@ -446,7 +446,7 @@ Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decodi
 ## Randomised or arbitrary one-to-one coding
 Here, a symbol is mapped to another symbol without using a generalised rule, such that the mapping is one-to-one. Hence, the to code and decode using this method, we need to define and refer to a specified mapping table. However, when it comes to coding a natural language (ex. English), decoding can be done by analysing the frequencies of the symbols in the message. This works, because many languages tend to use certain letters more than others, in general. For example, in English, the most commonly used letter is 'e', followed by 't'. Given below is a relative usage frequency distribution of the occurrence of alphabets in the words listed in the main entries of the Concise Oxford Dictionary  (9th edition, 1995) (_relative frequency of letter means the the proportion of the usage of the letter, rather than the total count_).
 
-![EnglishLetterFrequencies]((https://github.com/pranigopu/mathematics/blob/d9a65e5f60fa6afb8e42ed2ebba07bfa8dc220e9/numberTheory/applicationsOfNumberTheory/englishLetterFrequencies.png)
+![EnglishLetterFrequencies](https://github.com/pranigopu/mathematics/blob/d9a65e5f60fa6afb8e42ed2ebba07bfa8dc220e9/numberTheory/applicationsOfNumberTheory/englishLetterFrequencies.png)
 
 Using such information about a language's usage, and knowing the source language of a cipher, an arbitrary one-to-one coding can be cracked relatively easily.
 
