@@ -36,7 +36,7 @@ Matrices are deeply tied to linear transformations, so always consider matrix-re
     - `LT~M`: Linear transformations as matrices
         - Representing a LT as a matrix
         - Linearly transforming a vector with matrix multiplication
-        - Relating function composition to composition of LT's to composition of matrices
+        - Relating composition of functions to composition of LT's to composition of matrices<br> _Note that LT is a kind of function_
     - `M.Det`: Determinant
         - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_ <br> **NOTE**: _Scaling_ $\implies$ _Scaling of any subspace of the original space_
             - _Validating this representation of scale & orientation_
