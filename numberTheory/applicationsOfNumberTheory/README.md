@@ -434,7 +434,7 @@ $\implies \alpha(c) = \alpha(d) - \alpha($ "a" $) + 1 - k + \alpha($ "z" $)$
 
 ---
 
-**Case 2 condition in terms of $\alpha(d)$ ...<br>
+**Case 2 condition in terms of** $\alpha(d)$ ...<br>
 Now, note that the condition of case 2 is mutually exclusive from the condition of case 1 i.e. if condition of case 2 is true, condition of case 1 cannot be true. Now, from case 1, we got the equivalent condition in terms of $\alpha(d)$ as<br>
 
 $\alpha($ "a" $) \leq \alpha(d) - k$
