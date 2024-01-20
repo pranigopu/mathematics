@@ -204,7 +204,6 @@ Now, note that we from this, we can derive a result that states that for any two
 #### Using the Carmichael function
 The Carmichael function of any positive integer $x$ (denoted by $\lambda(x)$) is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a<x$ that is coprime to x.  Note the following results for Carmichael function:
 
-
 - If $x$ is prime, $\lambda(x)=x-1$
 - If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), <br> $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
 
@@ -228,29 +227,29 @@ $m^{\lambda(p)} \equiv 1 \pmod p$
 
 $\implies (m^{\lambda(p)})^k \equiv 1^k \pmod p$
 
-$\label{eq1} \implies m^{k\lambda(p)} \equiv 1 \pmod p$
+$\implies m^{k\lambda(p)} \equiv 1 \pmod p$ ... (1)
 
 Also, we have the trivial congruence:
 
-$\label{eq2} m \equiv m \pmod p$
+$m \equiv m \pmod p$ ... (2)
 
 Hence, we get:
 
-$\label{eq3} (\ref{eq1}) and (\ref{eq2}) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$
+$(1) and (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
 
 Similarly, we get:
 
-$\label{eq4} m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+ $
+$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in Z_+ $ ... (4)
 
-But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$.
+But $\lambda(pq) = \lambda(n) = LCM(\lambda(p), \lambda(q))$
 
 Putting $k=\frac{\lambda(n)}{\lambda(p)}$ in (\ref{eq3}) and $k=\frac{\lambda(n)}{\lambda(q)}$ in (\ref{eq4}):
 
-$\label{eq5} m^{\lambda(n)+1} \equiv m \pmod p$
+$m^{\lambda(n)+1} \equiv m \pmod p$ ... (5)
 
-$\label{eq6} m^{\lambda(n)+1} \equiv m \pmod q$
+$m^{\lambda(n)+1} \equiv m \pmod q$ ... (6)
 
-$(\ref{eq5}) and  (\ref{eq6}) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
+$(5) and  (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
 
 But $p$ and $q$ are distinct primes, hence are coprime to each other:
 
@@ -259,162 +258,189 @@ $\implies pq | (m^{\lambda(n)+1} - m)$
 $\implies m^{k\lambda(n)+1} \equiv m \pmod {pq}$
 <br><br>
 
-Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, \: k \in Z_+$.
+Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in Z_+$.
 
-But $1<\lambda(n)$ and $1 \in Z_+$. Hence, by division algorithm:
+But $1 < \lambda(n)$ and $1 \in Z_+$. Hence, by division algorithm:
 
-$\label{eq7} 1 = ed \bmod \lambda(n)$
+$1 = ed \bmod \lambda(n)$ ... (7)
 
 Hence, $e$ and $d$ are the modular multiplicative inverses of each other modulo $\lambda(n)$.
 
-#### Obtaining $e$ and $d$ }
-Note that (\ref{eq7}) $\implies e$ and $d$ are coprime to $\lambda(n)$. Hence, we could obtain $e$ as any positive integer less than $\lambda(n)$ such that $e$ is coprime to $\lambda(n)$. Then, obtain $d$ (i.e. the  modular multiplicative inverse of $e$ modulo $\lambda(n)$) accordingly. Hence we get the public encryption key as $(n, e)$ and the private decryption key as $(n, d)$. Note that $e$ and $d$ can be larger than $n$ if we want, but this would make encryption and decryption more inefficient.
+#### Obtaining $e$ and $d$
+Note that (7) $\implies e$ and $d$ are coprime to $\lambda(n)$. Hence, we could obtain $e$ as any positive integer less than $\lambda(n)$ such that $e$ is coprime to $\lambda(n)$. Then, obtain $d$ (i.e. the  modular multiplicative inverse of $e$ modulo $\lambda(n)$) accordingly. Hence we get the public encryption key as $(n, e)$ and the private decryption key as $(n, d)$. Note that $e$ and $d$ can be larger than $n$ if we want, but this would make encryption and decryption more inefficient.
 
 ### Obtaining the ciphertext}
 The encryption will be based made on $e$, but what should the encryption function be? We will now obtain the required encryption function, based on the established facts. Last subsection, have obtained $e$ and $d$ such that $(m^e)^d \equiv m \pmod n$.
+
 $\implies n | (m^e)^d - m$
+
 $\implies (m^e)^d - m = kn, k \in Z_+$
+
 $\implies (m^e)^d = kn + m, k \in Z_+$
-But $m<n$ and $m \in Z_+$. Hence, by division algorithm,
+
+But $m<n$ and $m \in Z_+$. Hence, by division algorithm:
+
 $m = (m^e)^d \bmod n ... (1)$
-Now, there is a result that states that
+
+Now, there is a result that states that:
+
 $ab \bmod c = (a \bmod c)(b \bmod c) \bmod c$
-Hence, from (1), we obtain the following...
+
+Hence, from (1), we obtain the following:
+
 $m = (m^e)^d \bmod n$
+
 $m = (m^e)(m^e)...(m^e) \bmod n$
+
 $m = (m^e \bmod n)(m^e \bmod n)...(m^e \bmod n) \bmod n$
+
 $m = (m^e \bmod n)^d \bmod n$
 <br><br>
+
 Hence, we can obtain the original message (in integer form) $m$ using $n$ and $d$ i.e. using the decryption key by applying $(m^e \bmod n)^d \bmod n$. But note that $m^e \bmod n$ is obtained using only $n$ and $e$ i.e. using only the encryption key. Hence, we obtain the following...
 
+- Ciphertext is obtained by $c = m^e \bmod n$
+- Plaintext is obtained by $m = c^d \bmod n$
 
-	- Ciphertext is obtained by $c = m^e \bmod n$
-	- Plaintext is obtained by $m = c^d \bmod n$
 
-
-### Message partitioning}
+### Message partitioning
 Note that the RSA encryption and decryption method as formulated above requires the $m<n$, where $m$ is the positive integer form of the message. In the proofs and derivations given above, we saw that this condition is necessary to ensure that the original message's integer can be obtained from the encrypted message's integer using the RSA method.
 <br><br>
+
 However, sometimes, the message string is too large. More specifically, using a given string-to-integer conversion method, a given message string cannot be converted into a positive integer $m$ such that $m<n$. In such cases, we generally partition the message into number of equally-sized partitions (the last partition's size may be lesser) that are sufficiently small. These partitions must be ordered, so that the complete message can be pieced together by combining the partitions in the same order.
 
-### RSA algorithm demonstration} \label{rsaDemo}
-\include*{codes/tex/rsaAlgorithmDemo}
-
-# Barcode scanning}
-## Barcode definition and purpose}
+# Barcode scanning
+## Barcode definition and purpose
 A barcode is the representation of numerals using strictly vertical solid-coloured stripes (usually black) of varying widths and spaces (usually white). A barcode is scanned by shining on the barcode, capturing the reflected light, and replacing the detected stripes and spaces with binary digit signals (generally symbolised as 0 (low/weak signal) and 1 (high/strong signal). The length of a strip or space determines the number of 0s or 1s that the scanner must interpret. Hence, the barcode is read as a binary number by a scanner, after which the binary number can be converted to any other base, such as base 10 (i.e. decimal number).
 <br><br>
- A barcode can contain various useful information in a compact manner. A common usage of barcodes is in identifying retail items. Here, barcodes often encode an item's origin, price, type, and location.
 
-## Barcode components}
+A barcode can contain various useful information in a compact manner. A common usage of barcodes is in identifying retail items. Here, barcodes often encode an item's origin, price, type, and location.
 
-\includegraphics{barcodeComponents} \cite{barcode_componentsDiagram}
+## Barcode components
+
+<img src="numberTheory/applicationsOfNumberTheory/barcodeComponents.png">
 
 A quiet zone is blank margin located at both ends of the barcode. The minimum margin space is 2.5 mm. The quiet zone adds a constant reflection at either end of the barcode, allowing the scanner to clearly identify the start and end of a barcode. If the width of a quiet zone is insufficient, barcodes can be hard for a scanner to read. 
 <br><br>
+
 The start character and the stop character are characters (given in barcode form) representing the start and the end of the data, respectively. The characters differ depending on the type of barcode.
 <br><br>
+
 The check digit is a numeral (given in barcode form) given just before the stop character. It helps the scanner verify whether the scanning was done correctly. The check digit is calculated as follows:
 
-\begin{enumerate}
-	- Add the digits in the odd-numbered positions (positions 1, 3, 5...)
-	- Multiply the above by 3
-	- Add the digits in the even-numbered positions (positions 2, 4, 6...)
-	- Add results of steps 2 and 3 together
-	- Find the closest multiple of 10 greater than the result of step 4
-	- Subtract the result of step 4 from the result of step 5
-\end{enumerate}
+1. Add the digits in the odd-numbered positions (positions 1, 3, 5...)
+2. Multiply the above by 3
+3. Add the digits in the even-numbered positions (positions 2, 4, 6...)
+4. Add results of steps 2 and 3 together
+5. Find the closest multiple of 10 greater than the result of step 4
+6. Subtract the result of step 4 from the result of step 5
 
-Result 6 is the check digit. Now, to simplify the last two steps, let $c$ be the result obtained at step 4, and et $k$ be the smallest number such that $10k \geq c$. Now note that steps 5 and 6 state that you must perform $10k - c$. But by definition of $k$, we know that $10k - c \leq 10$
+Result 6 is the check digit. Now, to simplify the last two steps, let $c$ be the result obtained at step 4, and et $k$ be the smallest number such that $10k \geq c$. Now note that steps 5 and 6 state that you must perform $10k - c$. But by definition of $k$, we know that:
+
+$10k - c \leq 10$
+
 $\implies 10k - c = (10k-c) \bmod 10 = 10 - c \bmod 10$
+
 We will use this result to create a function to calculate the check digit of a barcode...
 
-## Simple barcode check digit calculator}
-\include*{codes/tex/barcodeCheckDigit}
-
-# Coding and decoding}
-## Definition and purpose}
+# Coding and decoding
+## Definition and purpose
 Letter coding is a mapping wherein alphabets of a string are converted into another alphabet using a specific rule. More precisely, letter coding is a mapping from the set of alphabets to the set of alphabets.
 <br><br>
+
 Number coding is a mapping wherein units of a string (unit can be decided by the coder, ex. words, alphabets, fixed size slices) are converted into a number using a specific rule. More precisely, letter coding is a mapping from the set of string units to the set of integers. We have witnessed number coding in this document in the chapter on cryptography, in the demonstration of RSA, where message partitions are first converted to integers (check document subsection \ref{rsaDemo}).
 <br><br>
+
 Coding in general is a mapping between units of two data representations (which may be same (as in letter coding) or different (as in number coding)). Note that for it to be possible to obtain the original data from coded data, there must be one-to-one mapping from the domain to the range of the coding map.
 <br><br>
+
 Some applications of coding:
 
-	- Cryptography (messages are made secret using encryption and decryption keys)
-	- Data compression (longer data is mapped to a more compact representation)
-	- Line coding (converting data into signals to be transmitted across distances)
+- Cryptography (messages are made secret using encryption and decryption keys)
+- Data compression (longer data is mapped to a more compact representation)
+- Line coding (converting data into signals to be transmitted across distances)
 
-
-## Caesar cipher}
+## Caesar cipher
 This is the simplest letter coding rule. Here, given a definite order of alphabets (ex. 'a', 'b', 'c', 'd', ...), every alphabet $\alpha$ is mapped to the alphabet present at a fixed offset from the position of $\alpha$. Note that the ordered sequence of alphabets is circular, so if the offset position exceeds the length of the sequence, the coding process loops back to the first position and continues accordingly.
 
-### Python implementation}
+### Python implementation
 For our implementation of Caesar cipher in Python, we make the following considerations
 
-	- We are dealing with ASCII values, so $"z" = 122$, $"Z" = 90$
-	- If character is uppercase, choose $"Z"$ as the last alphabet
-	- If character is lowercase, choose $"z"$ as the last alphabet
+- We are dealing with ASCII values, so $"z" = 122$, $"Z" = 90$
+- If character is uppercase, choose $"Z"$ as the last alphabet
+- If character is lowercase, choose $"z"$ as the last alphabet
 
-
-#### Assumptions, definitions and notations}
+#### Assumptions, definitions and notations
 Our very first assumption in this implementation is that the message to be coded is in regular English, with special characters or alphabets not being considered as part of the alphabet. Note that Caesar cipher can be designed to suit different languages and use cases.
 <br><br>
+
 Note that we assume that the offset, which we shall denote as $k$, is such that $k \in Z_+, k < n$ (assuming we have $n$ possible letters), since due to the circular nature of Caesar cipher, any offset $k \geq n$ can be converted into a functionally identical offset $k \in Z_+, k < n$ using modulo $n$ i.e. doing $k_{new}=k_{old} \bmod n$.
 <br><br>
+
 Note that due to the very definition of Caesar cipher, we map the letters to be coded and decoded to a fixed set of numerical indices (i.e. natural numbers separated by 1). For example, in regular English alphabets, we may give "a" = 1, "b = 2... "z" = 26. The ASCII values of English alphabets also form a mapping between letters and a fixed set of indices, if we consider uppercase and lowercase alphabets separately. The ASCII values of alphabets are what we will be using in our Python implementation. Non-English alphabets will remain untouched in our algorithm.
 <br><br>
+
 Consider a set of alphabets that are mapped to a fixed set of indices (ASCII values). Define $\alpha$ as the function that returns the index (ASCII value) of an alphabet. Denote any alphabet in the string as $c$, denote as $d$ as the Caesar cipher of $c$, and denote $k \in Z_+$ as the offset. For simplicity of explanation, let $c$ be lowercase. Note that the same logic will apply for uppercase too.
 
-### Encoding implementation}
+### Encoding implementation
 Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha("a") \leq \alpha(c) \leq \alpha("z")$.
 
-#### CASE 1: $\alpha(c)+k \leq \alpha("z")$}
-$ \label{caesarCipherEncodingEq1} \implies \alpha(d) = \alpha(c)+k $
+#### CASE 1: $\alpha(c)+k \leq \alpha("z")$
+$\implies \alpha(d) = \alpha(c)+k$ ... (1)
 
-#### CASE 2: $\alpha(c)+k > \alpha("z")$}
-$ \label{caesarCipherEncodingEq2} \implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1 $
+#### CASE 2: $\alpha(c)+k > \alpha("z")$
+$implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ ... (2)
 
-\textbf{Explanation of the above logic}...<br>
-The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in
+**Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in:
+
 $\alpha(c)+k$
-But in case 2, $\alpha(c)+k > \alpha("z")$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha("z")$, and obtain the alphabet that has this offset from $"z"$, considering that $"z"$ is looped back to $"a"$. This process can be computationally expressed as equation \ref{caesarCipherEncodingEq2}.
 
-\include*{codes/tex/caesarCipherEncoding}
+But in case 2, $\alpha(c)+k > \alpha("z")$, which means $\alpha(c)+k$ is not the required cipher. Instead, we will count the number of digits exceeding $z$ i.e. $(\alpha(c)+k)-\alpha("z")$, and obtain the alphabet that has this offset from $"z"$, considering that $"z"$ is looped back to $"a"$. This process can be computationally expressed as equation (1).
 
-### Decoding implementation}
+### Decoding implementation
 Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha("a") \leq \alpha(d) \leq \alpha("z")$.
-#### CASE 1: $\alpha(c)+k \leq \alpha("z")$}
-Hence, from the encoding implementation for this case i.e. equation \ref{caesarCipherEncodingEq1}, we get
+
+#### CASE 1: $\alpha(c)+k \leq \alpha("z")$
+Hence, from the encoding implementation for this case i.e. equation (1), we get
 
 $\alpha(d) = \alpha(c)+k$
-$ \label{caesarCipherDecodingEq1} \implies \alpha(c) = \alpha(d) - k $
-<br><br>
-\textbf{Case 1 condition in terms of $\alpha(d)$}...<br>
-Now, note that by its very nature, $\alpha("a") \leq \alpha(c) \leq \alpha("z")$<br>
-$\implies \alpha("a") \leq \alpha(d) - k  \leq \alpha("z")$<br>
-Since $\alpha("a") \leq \alpha(d) \leq \alpha("z")$, the above condition, simply becomes<br>
-$\alpha("a") \leq \alpha(d) - k$<br>
-since $\alpha(d) - k < \alpha(d) \leq \alpha("z")$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
 
-#### CASE 2: $\alpha(c)+k > \alpha("z")$}
-Hence, from the encoding implementation for this case i.e. equation \ref{caesarCipherEncodingEq2}, we get
-$\alpha(d) = (\alpha(c)+k - \alpha("z") + \alpha("a") - 1$
-$ \implies \alpha(c) = \alpha(d) - \alpha("a") + 1 - k + \alpha("z") $
+$ \implies \alpha(c) = \alpha(d) - k $ ... (3)
 <br><br>
-\textbf{Case 2 condition in terms of $\alpha(d)$}...<br>
-Now, note that the condition of case 2 is mutually exclusive from the condition of case 1 i.e. if condition of case 2 is true, condition of case 1 cannot be true. Now, from case 1, we got the equivalent condition in terms of $\alpha(d)$ as<br>
+
+**Case 1 condition in terms of** $\alpha(d)$ ...
+
+Now, note that by its very nature, $\alpha("a") \leq \alpha(c) \leq \alpha("z")$
+
+$\implies \alpha("a") \leq \alpha(d) - k  \leq \alpha("z")$
+
+Since $\alpha("a") \leq \alpha(d) \leq \alpha("z")$, the above condition, simply becomes...
+
 $\alpha("a") \leq \alpha(d) - k$<br>
-Hence, this condition must be mutually exclusive from the equivalent condition of case 2 in terms of $\alpha(d)$. Hence, the condition of case 2 in terms of $\alpha(d)$ must be<br>
-$\alpha("a") > \alpha(d) - k$<br>
+
+... since $\alpha(d) - k < \alpha(d) \leq \alpha("z")$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
+
+#### CASE 2: $\alpha(c)+k > \alpha("z")$
+Hence, from the encoding implementation for this case i.e. equation (2), we get:
+
+$\alpha(d) = (\alpha(c)+k - \alpha("z") + \alpha("a") - 1$
+$\implies \alpha(c) = \alpha(d) - \alpha("a") + 1 - k + \alpha("z")$
+<br><br>
+
+**Case 2 condition in terms of(( $\alpha(d)$} ...<br>
+Now, note that the condition of case 2 is mutually exclusive from the condition of case 1 i.e. if condition of case 2 is true, condition of case 1 cannot be true. Now, from case 1, we got the equivalent condition in terms of $\alpha(d)$ as<br>
+
+$\alpha("a") \leq \alpha(d) - k$
+
+Hence, this condition must be mutually exclusive from the equivalent condition of case 2 in terms of $\alpha(d)$. Hence, the condition of case 2 in terms of $\alpha(d)$ must be:
+
+$\alpha("a") > \alpha(d) - k$
+
 Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place. In any case, in the Python implementation, a mutually exclusive condition can be obtained by simply using "else".
 
-\include*{codes/tex/caesarCipherDecoding}
+## Randomised or arbitrary one-to-one coding
+Here, a symbol is mapped to another symbol without using a generalised rule, such that the mapping is one-to-one. Hence, the to code and decode using this method, we need to define and refer to a specified mapping table. However, when it comes to coding a natural language (ex. English), decoding can be done by analysing the frequencies of the symbols in the message. This works, because many languages tend to use certain letters more than others, in general. For example, in English, the most commonly used letter is 'e', followed by 't'. Given below is a relative usage frequency distribution of the occurrence of alphabets in the words listed in the main entries of the Concise Oxford Dictionary  (9th edition, 1995) (_relative frequency of letter means the the proportion of the usage of the letter, rather than the total count_).
 
-## Randomised or arbitrary one-to-one coding}
-Here, a symbol is mapped to another symbol without using a generalised rule, such that the mapping is one-to-one. Hence, the to code and decode using this method, we need to define and refer to a specified mapping table. However, when it comes to coding a natural language (ex. English), decoding can be done by analysing the frequencies of the symbols in the message. This works, because many languages tend to use certain letters more than others, in general. For example, in English, the most commonly used letter is 'e', followed by 't'. Given below is a relative usage frequency distribution of the occurrence of alphabets in the words listed in the main entries of the Concise Oxford Dictionary  (9th edition, 1995) \textit{(relative frequency of letter means the the proportion of the usage of the letter, rather than the total count)}.
-
-\includegraphics{englishLetterFrequencies} \cite{englishLetterFreqGraph}
+<img src="numberTheory/applicationsOfNumberTheory/englishLetterFrequencies.png">
 
 Using such information about a language's usage, and knowing the source language of a cipher, an arbitrary one-to-one coding can be cracked relatively easily.
