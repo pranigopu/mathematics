@@ -19,7 +19,7 @@
         - `V.VS.Dim`: Dimensions of a vector space (_in every interpretation, i.e. every context_)
         - `V.VS.B`: Basis of a vector space<br> **KEY POINT**: _Every vector of the vector space is a linear combination of the basis vectors_
         - `LT~V.VS`: Linear transformations as transformations of vector spaces
-            - Representing a LT as a transformation of basis vectors
+            - Representing a LT as a transformation of basis vectors<br> **KEY POINT**: _Every transformedd vector is a linear combination of the transformed basis vectors_
             - Reducing the dimensionality of a vector space through LT
 
 Matrices are deeply tied to linear transformations, so always consider matrix-related topics in the context of LT...
