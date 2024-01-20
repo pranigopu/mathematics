@@ -241,7 +241,7 @@ $m \equiv m \pmod p$ ... (2)
 
 Hence, we get:
 
-$(1) \& (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
+$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
 
 Similarly, we get:
 
@@ -255,7 +255,7 @@ $m^{\lambda(n)+1} \equiv m \pmod p$ ... (5)
 
 $m^{\lambda(n)+1} \equiv m \pmod q$ ... (6)
 
-$(5) \& (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
+$(5), (6) \implies p | (m^{\lambda(n)+1} - m), \: q | (m^{\lambda(n)+1} - m) $
 
 But $p$ and $q$ are distinct primes, hence are coprime to each other:
 
@@ -264,6 +264,7 @@ $\implies pq | (m^{\lambda(n)+1} - m)$
 $\implies m^{k\lambda(n)+1} \equiv m \pmod {pq}$
 
 Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in Z_+$.
+<br><br>
 
 But $1 < \lambda(n)$ and $1 \in Z_+$. Hence, by division algorithm:
 
