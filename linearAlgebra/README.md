@@ -36,8 +36,8 @@ Matrices are deeply tied to linear transformations, so always consider matrix-re
         - Linearly transforming a vector with matrix multiplication
         - Relating function composition to composition of LT's to composition of matrices
     - `M.Det`: Determinant
-        - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_
-            - _How and why are scale & orientation represented the way they are?_
+        - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_ <br> **NOTE**: _Scaling_ $\implies$ _Scaling of any subspace of the original space_
+            - _Validating this representation of scale & orientation_
             - _What does zero determinant mean?_
         - Calculation & justification of the calculation method
         - Key results on determinants & their validation
