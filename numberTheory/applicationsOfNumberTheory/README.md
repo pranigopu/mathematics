@@ -353,7 +353,7 @@ We will use this result to create a function to calculate the check digit of a b
 Letter coding is a mapping wherein alphabets of a string are converted into another alphabet using a specific rule. More precisely, letter coding is a mapping from the set of alphabets to the set of alphabets.
 <br><br>
 
-Number coding is a mapping wherein units of a string (unit can be decided by the coder, ex. words, alphabets, fixed size slices) are converted into a number using a specific rule. More precisely, letter coding is a mapping from the set of string units to the set of integers. We have witnessed number coding in this document in the chapter on cryptography, in the demonstration of RSA, where message partitions are first converted to integers (check document subsection \ref{rsaDemo}).
+Number coding is a mapping wherein units of a string (unit can be decided by the coder, ex. words, alphabets, fixed size slices) are converted into a number using a specific rule. More precisely, letter coding is a mapping from the set of string units to the set of integers. We have witnessed number coding in this document in the chapter on cryptography, in the demonstration of RSA (check the `implementations` directory), where message partitions are first converted to integers.
 <br><br>
 
 Coding in general is a mapping between units of two data representations (which may be same (as in letter coding) or different (as in number coding)). Note that for it to be possible to obtain the original data from coded data, there must be one-to-one mapping from the domain to the range of the coding map.
@@ -371,9 +371,9 @@ This is the simplest letter coding rule. Here, given a definite order of alphabe
 ### Python implementation
 For our implementation of Caesar cipher in Python, we make the following considerations
 
-- We are dealing with ASCII values, so $"z" = 122$, $"Z" = 90$
-- If character is uppercase, choose $"Z"$ as the last alphabet
-- If character is lowercase, choose $"z"$ as the last alphabet
+- We are dealing with ASCII values, so $``z" = 122$, $``Z" = 90$
+- If character is uppercase, choose $``Z"$ as the last alphabet
+- If character is lowercase, choose $``z"$ as the last alphabet
 
 #### Assumptions, definitions and notations
 Our very first assumption in this implementation is that the message to be coded is in regular English, with special characters or alphabets not being considered as part of the alphabet. Note that Caesar cipher can be designed to suit different languages and use cases.
