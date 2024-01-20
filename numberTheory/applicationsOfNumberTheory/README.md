@@ -42,9 +42,9 @@ End-to-end encryption is a method to ensure that data shared between two users' 
 
 This involves generating a secret key for each message in the sender's and receiver's separately.
 
-# Hashing function
+# Hash function
 ## Definition and associated terms}
-A hashing function is a function that maps given data of arbitrary size to a single value that has fixed size limit. Applying a hashing function on data is called "hashing the data". The return value of a hash function is called a hash value. In some implementations, the hash value is of fixed length.
+A hash function is a function that maps given data of arbitrary size to a single value that has fixed size limit. Applying a hash function on data is called "hashing the data". The return value of a hash function is called a hash value. In some implementations, the hash value is of fixed length.
 <br><br>
 
 Since hashing often involves converting any input into a hash value of limited (often smaller) size, hash functions may be called "compression functions". For a similar reason, a hash value is also called a message digest.
