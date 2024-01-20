@@ -11,8 +11,9 @@
     - `V.Op`: Vector operations & their meaning w.r.t. geometric interpretation<br> **NOTE**: _Full clarity of some topics requires understanding linear transformations_
         - Vector addition (_obtaining the resultant vector of a series of vector movements_)
         - Scalar product (_scaling a vector, i.e. changing its magnitude while maintaining direction_)
+        - Vector product
         - Dot product & its meaning (_discussed later_)
-        - Vector product & its meaning (_discussed later_)
+        - Cross product & its meaning (_discussed later_)
     - `V.Sp`: Span of a set of vectors
     - `V.M`: Matrices as vectors of vectors
     - `V.VS`: Vector spaces
