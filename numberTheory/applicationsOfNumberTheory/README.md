@@ -409,7 +409,7 @@ Hence, from the encoding implementation for this case i.e. equation $(1)$, we ge
 
 $\alpha(d) = \alpha(c)+k$
 
-$ \implies \alpha(c) = \alpha(d) - k $ $\dots (3)$
+$\implies \alpha(c) = \alpha(d) - k$ $\dots (3)$
 <br><br>
 
 **Case 1 condition in terms of** $\alpha(d)$ ...
