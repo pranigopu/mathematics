@@ -1,4 +1,4 @@
-# Applications of Number Theory
+# APPLICATIONS OF NUMBER THEORY
 
 _Project by Pranav Gopalkrishna_
 
