@@ -22,6 +22,8 @@
             - Representing a LT as a transformation of basis vectors
             - Reducing the dimensionality of a vector space through LT
 
+Matrices are deeply tied to linear transformations, so always consider matrix-related topics in the context of LT...
+
 - `M`: Matrices<br> _... extends from_ `V.M`
     - `M.base`: General definition of matrix & specific interpretations
     - `M.Op`: Matrix operations & their meaning w.r.t. vectors
@@ -34,6 +36,27 @@
         - Relating function composition to composition of LT's to composition of matrices
     - `M.Det`: Determinant
         - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_
+            - _How and why are scale & orientation represented the way they are?_
+            - _What does zero determinant mean?_
         - Calculation & justification of the calculation method
         - Key results on determinants & their validation
             - $\det(A B) = \det(A) \det(B)$
+    - `M.Inv`: Inverse of a matrix
+        - `M.Det~LT`: Inverse of a matrix as inverse (i.e. reversal) of a LT<br> _LT is a function; think in terms of inverse of functions_
+        - Relation between inverse & identity transformations
+        - Relation between determinant & inverse
+    - `M.SoE`: Systems of equations as matrices
+        - `M.SoE~LT`: SoE as finding the preimage of a vector w.r.t. a LT<br> _Looking for the vector(s) that is mapped by the LT to the given vector_
+        - Zero determinant & possible solutions given coefficient <br> _Connect with LT_
+        - Specifying zero determinant cases using _rank_ <br> _Connect with LT_
+
+Generalising linear transformation topics...
+
+- `LT`: Linear transformation (general concepts)<br> **NOTE**: We shall take for granted that LT's are represented as matrices
+    - `LT.base`: Representing LT as a matrix
+    - `LT.Rank`: Rank of a matrix a.k.a. rank of a LT
+    - `LT.CS`: Column space of a matrix<br> _Essentially, the span of the transformed basis vectors, i.e. the columns_
+        - `LT.Rank~LT.CS`: _Rank is the number of dimensions in the column space_
+        - "Full rank" matrix $\implies$ Rank equals the number of columns $\implies$ Maximum dimensions for the column space
+    - `LT.DimRed`: Dimensionality reduction of vector space with LT
+    - `LT.NS`: Nullspace of a matrix a.k.a. nullspace of a LT<br> _... related to_ `LT.DimRed`<br> _In essence, it is the set of vectors that get mapped by the LT to a null vector, i.e. the origin_
