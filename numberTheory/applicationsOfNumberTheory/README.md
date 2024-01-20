@@ -141,7 +141,7 @@ A cryptosystem (also called cipher system) is an implementation of cryptographic
 
 Plaintext is the data to be messaged. Encryption key is a value known by the sender. Encryption algorithm is a computational process whose inputs are the plaintext and the encryption key, and whose output is the ciphertext, which is a transformed version of the plaintext (_note that the ciphertext may be accessed by any interceptor who has access to the communication channel_). Decryption algorithm is a computational process whose inputs are the ciphertext and the decryption key, and whose intended output is the plaintext. Decryption key is a value known by the receiver, and related to the encryption key such that when it is applied to the decryption algorithm, it transforms the ciphertext back to the plaintext.
 
-### Cryptography classification}
+### Cryptography classification
 Cryptography can be classified into the following categories:
 
 - Symmetric cryptography
@@ -202,7 +202,7 @@ $m^{p-1} \equiv 1 \pmod p \implies m^p \equiv m \pmod p$
 Now, note that we from this, we can derive a result that states that for any two primes $p$ and $q$, $m^{pq} \equiv m \pmod {pq}$, from which we can get $e=p, d=q$ or $e=q, d=p$. But this is obviously not secure, since if any one prime is known, the other can be easily deduced by dividing $n$ (_hence, since public encryption key is visible to everyone, decryption key can be easily found for any potential receiver_). Hence, we use another approach...
 
 #### Using the Carmichael function
-The Carmichael function of any positive integer $x$, denoted by $\lambda(x)$, is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a<x$ that is coprime to x. Note the following results for Carmichael function:
+The Carmichael function of any positive integer $x$, denoted by $\lambda(x)$, is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a < x$ that is coprime to $x$. Note the following results for Carmichael function:
 
 1.
 
