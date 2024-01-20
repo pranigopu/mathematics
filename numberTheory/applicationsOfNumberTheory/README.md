@@ -4,10 +4,7 @@ _Project by Pranav Gopalkrishna_
 
 # Pseudorandom numbers
 ## Random numbers
-A random number is a measurement taken from a random i.e. non-deterministic process. i.e. a process whose future behaviour cannot be predicted with certainty. Hence, in general, a sequence of random numbers cannot be expressed as a generalised formula. Instead, a sequence of random numbers is defined using a probability distribution that associates possible value (that can be drawn from the process) to its probability of occurrence (i.e. the probability that the value occurs at any given point in time in the random process).
-<br><br>
-
-A sequence of numbers is said to be random if:
+A random number is a measurement taken from a random i.e. non-deterministic process. i.e. a process whose future behaviour cannot be predicted with certainty. Hence, in general, a sequence of random numbers cannot be expressed as a generalised formula. Instead, a sequence of random numbers is defined using a probability distribution that associates possible value (that can be drawn from the process) to its probability of occurrence (i.e. the probability that the value occurs at any given point in time in the random process). A sequence of numbers is said to be random if:
 
 - Each number has equal probability of occurrence (uniformity)
 - Any past value has no effect in determining the current value (independence)
