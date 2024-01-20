@@ -204,10 +204,14 @@ Now, note that we from this, we can derive a result that states that for any two
 #### Using the Carmichael function
 The Carmichael function of any positive integer $x$ (denoted by $\lambda(x)$) is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a<x$ that is coprime to x.  Note the following results for Carmichael function:
 
-- If $x$ is prime, $\lambda(x)=x-1$
-- If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), <br> $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
+1.
 
-<br>
+If $x$ is prime, $\lambda(x)=x-1$
+
+2.
+
+If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
+<br><br>
 
 We will use this function and the above results to obtain a suitable $e$.
 Consider...
@@ -269,7 +273,7 @@ Hence, $e$ and $d$ are the modular multiplicative inverses of each other modulo 
 #### Obtaining $e$ and $d$
 Note that (7) $\implies e$ and $d$ are coprime to $\lambda(n)$. Hence, we could obtain $e$ as any positive integer less than $\lambda(n)$ such that $e$ is coprime to $\lambda(n)$. Then, obtain $d$ (i.e. the  modular multiplicative inverse of $e$ modulo $\lambda(n)$) accordingly. Hence we get the public encryption key as $(n, e)$ and the private decryption key as $(n, d)$. Note that $e$ and $d$ can be larger than $n$ if we want, but this would make encryption and decryption more inefficient.
 
-### Obtaining the ciphertext}
+### Obtaining the ciphertext
 The encryption will be based made on $e$, but what should the encryption function be? We will now obtain the required encryption function, based on the established facts. Last subsection, have obtained $e$ and $d$ such that $(m^e)^d \equiv m \pmod n$.
 
 $\implies n | (m^e)^d - m$
