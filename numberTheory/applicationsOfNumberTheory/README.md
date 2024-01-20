@@ -202,7 +202,7 @@ $m^{p-1} \equiv 1 \pmod p \implies m^p \equiv m \pmod p$
 Now, note that we from this, we can derive a result that states that for any two primes $p$ and $q$, $m^{pq} \equiv m \pmod {pq}$, from which we can get $e=p, d=q$ or $e=q, d=p$. But this is obviously not secure, since if any one prime is known, the other can be easily deduced by dividing $n$ (_hence, since public encryption key is visible to everyone, decryption key can be easily found for any potential receiver_). Hence, we use another approach...
 
 #### Using the Carmichael function
-The Carmichael function of any positive integer $x$ (denoted by $\lambda(x)$) is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a<x$ that is coprime to x.  Note the following results for Carmichael function:
+The Carmichael function of any positive integer $x$, denoted by $\lambda(x)$, is the smallest positive (hence non-zero) integer $k$ such that $a^k \equiv 1 \pmod x$ for any positive integer $a<x$ that is coprime to x. Note the following results for Carmichael function:
 
 1.
 
@@ -210,7 +210,9 @@ If $x$ is prime, $\lambda(x)=x-1$
 
 2.
 
-If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then $\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
+If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then
+
+$\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
 <br><br>
 
 We will use this function and the above results to obtain a suitable $e$.
