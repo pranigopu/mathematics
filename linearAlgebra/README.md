@@ -36,4 +36,4 @@
         - `M.Det~LT`: Determinant as a number related to a LT<br> _More specifically, it gives the scale & orientation of the LT_
         - Calculation & justification of the calculation method
         - Key results on determinants & their validation
-            - $\det(A B) = det(A) det(B)$
+            - $\det(A B) = \det(A) \det(B)$
