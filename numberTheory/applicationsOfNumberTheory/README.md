@@ -394,7 +394,7 @@ Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $
 $\implies \alpha(d) = \alpha(c)+k$ $\dots (1)$
 
 #### CASE 2: $\alpha(c)+k > \alpha("z")$
-$implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ $\dots (2)$
+$\implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha("a") - 1$ $\dots (2)$
 
 **Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in:
 
