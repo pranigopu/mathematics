@@ -241,7 +241,7 @@ $m \equiv m \pmod p$ ... (2)
 
 Hence, we get:
 
-$(1) and (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
+$(1) \& (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in Z_+$ ... (3)
 
 Similarly, we get:
 
@@ -306,9 +306,8 @@ Hence, we can obtain the original message (in integer form) $m$ using $n$ and $d
 - Ciphertext is obtained by $c = m^e \bmod n$
 - Plaintext is obtained by $m = c^d \bmod n$
 
-
 ### Message partitioning
-Note that the RSA encryption and decryption method as formulated above requires the $m<n$, where $m$ is the positive integer form of the message. In the proofs and derivations given above, we saw that this condition is necessary to ensure that the original message's integer can be obtained from the encrypted message's integer using the RSA method.
+Note that the RSA encryption and decryption method as formulated above requires the $m < n$, where $m$ is the positive integer form of the message. In the proofs and derivations given above, we saw that this condition is necessary to ensure that the original message's integer can be obtained from the encrypted message's integer using the RSA method.
 <br><br>
 
 However, sometimes, the message string is too large. More specifically, using a given string-to-integer conversion method, a given message string cannot be converted into a positive integer $m$ such that $m<n$. In such cases, we generally partition the message into number of equally-sized partitions (the last partition's size may be lesser) that are sufficiently small. These partitions must be ordered, so that the complete message can be pieced together by combining the partitions in the same order.
