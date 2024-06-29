@@ -57,7 +57,7 @@ It should be computationally difficult to find the inverse of a hash function, i
 The mapping of two or more inputs to the same hash value i.e. collisions must be rare, and ideally impossible. In other terms, it must be difficult to find two inputs $x$ and $y$ such that $h(x)=h(y)=z$. However, since inputs are of arbitrary length while hash values are of limited length, collisions are impossible to eliminate entirely.
 
 ### Second pre-image resistance
-This is related to collision resistance, but here we specify that \textit{given an input and hash value pair}, it should be computationally difficult to find another input that has the same hash value. In other terms, given a hash value $z$ for a pre-image $x$ i.e. for $h(x)=z$, it must be difficult to obtain another pre-image $y \neq x$ such that $h(y)=z$. Note that collision resistance implies second pre-image resistance.
+This is related to collision resistance, but here we specify that _given an input and hash value pair_, it should be computationally difficult to find another input that has the same hash value. In other terms, given a hash value $z$ for a pre-image $x$ i.e. for $h(x)=z$, it must be difficult to obtain another pre-image $y \neq x$ such that $h(y)=z$. Note that collision resistance implies second pre-image resistance.
 
 ## Design and implementation
 At the most basic level, a hash function can simply operate on an input to produce an output that has a fixed size limit. Now, note that hash functions are often used for creating hash tables (also called hash maps). Hash tables are arrays that can associate a key to a value. Hence, we can use the hash value of a given input to perform a direct lookup in the table, to see
@@ -152,7 +152,7 @@ Cryptography can be classified into the following categories:
 
 ## Private and public keys
 ### Private keys and symmetric cryptography
-A private key is a key used in symmetric cryptography, hence is used for both encryption and decryption. It is private i.e. known only to the sender and receiver, and kept secret. For example, the end-to-end encryption (discussed in the pseudorandom numbers chapter) in a messaging service such as WhatsApp uses private keys that are known only by the two or more parties of a chat. \textit{Note that in this example, the private keys change for every message, based on a pseudorandom sequence generated separately by each device registered in the chat.
+A private key is a key used in symmetric cryptography, hence is used for both encryption and decryption. It is private i.e. known only to the sender and receiver, and kept secret. For example, the end-to-end encryption (discussed in the pseudorandom numbers chapter) in a messaging service such as WhatsApp uses private keys that are known only by the two or more parties of a chat. _Note that in this example, the private keys change for every message, based on a pseudorandom sequence generated separately by each device registered in the chat._
 
 ### Public keys and asymmetric cryptography
 A public key is an encryption key that is publicly visible in a network, and is associated with a particular member of the network. This public key is used to encrypt messages intended for the particular member, who then uses a different private decryption key to decrypt the message. Since the encryption and decryption keys differ, this is asymmetric cryptography.
