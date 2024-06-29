@@ -51,11 +51,11 @@ _Project by Pranav Gopalkrishna_
     - [Python implementation](#python-implementation)
       - [Assumptions, definitions and notations](#assumptions-definitions-and-notations)
     - [Encoding implementation](#encoding-implementation)
-      - [CASE 1: $\\alpha(c)+k \\leq \\alpha($ "z" $)$](#case-1-alphack-leq-alpha-z-)
-      - [CASE 2: $\\alpha(c)+k \> \\alpha($ "z" $)$](#case-2-alphack--alpha-z-)
+      - [CASE 1](#case-1)
+      - [CASE 2](#case-2)
     - [Decoding implementation](#decoding-implementation)
-      - [CASE 1: $\\alpha(c)+k \\leq \\alpha($ "z" $)$](#case-1-alphack-leq-alpha-z--1)
-      - [CASE 2: $\\alpha(c)+k \> \\alpha($ "z" $)$](#case-2-alphack--alpha-z--1)
+      - [CASE 1](#case-1-1)
+      - [CASE 2](#case-2-1)
   - [Randomised or arbitrary one-to-one coding](#randomised-or-arbitrary-one-to-one-coding)
   - [REFERENCES](#references)
 
@@ -447,10 +447,14 @@ Consider a set of alphabets that are mapped to a fixed set of indices (ASCII val
 ### Encoding implementation
 Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha($ "a" $) \leq \alpha(c) \leq \alpha($ "z" $)$.
 
-#### CASE 1: $\alpha(c)+k \leq \alpha($ "z" $)$
+#### CASE 1
+$\alpha(c)+k \leq \alpha($ "z" $)$
+
 $\implies \alpha(d) = \alpha(c)+k$ $\dots (1)$
 
-#### CASE 2: $\alpha(c)+k > \alpha($ "z" $)$
+#### CASE 2
+$\alpha(c)+k > \alpha($ "z" $)$
+
 $\implies \alpha(d) = (\alpha(c)+k) - \alpha(z) + \alpha($ "a" $) - 1$ $\dots (2)$
 
 **Explanation of the above logic**:<br>The logic for case 1 is trivial, based on the definition of Caesar cipher. To see why the logic for the case 2 holds, consider the following. To obtain the Caesar cipher, we may begin by simply adding the offset to the index of $c$, as in $\alpha(c)+k$.
@@ -460,7 +464,9 @@ But in case 2, $\alpha(c)+k > \alpha($ "z" $)$, which means $\alpha(c)+k$ is not
 ### Decoding implementation
 Here, we will aim to obtain $\alpha(c)$ (i.e. the original character) in terms of $\alpha(d)$. This also means that to be able to implement the decoding formula knowing only $d$, we must obtain the equivalent conditions of cases 1 and 2 in terms of $\alpha(d)$. Now note that, assuming $d$ is a proper Caesar cipher of $c$, we have that $\alpha($ "a" $) \leq \alpha(d) \leq \alpha($ "z" $)$.
 
-#### CASE 1: $\alpha(c)+k \leq \alpha($ "z" $)$
+#### CASE 1
+$\alpha(c)+k \leq \alpha($ "z" $)$
+
 Hence, from the encoding implementation for this case i.e. equation $(1)$, we get
 
 $\alpha(d) = \alpha(c)+k$
@@ -481,7 +487,9 @@ $\alpha($ "a" $) \leq \alpha(d) - k$<br>
 
 ... since $\alpha(d) - k < \alpha(d) \leq \alpha($ "z" $)$. Hence, $\alpha(d) - k$ needs to satisfy the above condition for the above decoding to take place.
 
-#### CASE 2: $\alpha(c)+k > \alpha($ "z" $)$
+#### CASE 2
+$\alpha(c)+k > \alpha($ "z" $)$
+
 Hence, from the encoding implementation for this case i.e. equation $(2)$, we get:
 
 $\alpha(d) = (\alpha(c)+k - \alpha($ "z" $) + \alpha($ "a" $) - 1$
