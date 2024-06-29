@@ -39,7 +39,7 @@ _Project by Pranav Gopalkrishna_
     - [Obtaining the public and private keys](#obtaining-the-public-and-private-keys)
       - [Introduction to the problem](#introduction-to-the-problem)
       - [Using the Carmichael function](#using-the-carmichael-function)
-      - [Obtaining $e$ and $d$](#obtaining-e-and-d)
+      - [Obtaining e and d](#obtaining-e-and-d)
     - [Obtaining the ciphertext](#obtaining-the-ciphertext)
     - [Message partitioning](#message-partitioning)
 - [Barcode scanning](#barcode-scanning)
@@ -329,7 +329,7 @@ $1 = ed \bmod \lambda(n)$ $\dots (7)$
 
 Hence, $e$ and $d$ are the modular multiplicative inverses of each other modulo $\lambda(n)$.
 
-#### Obtaining $e$ and $d$
+#### Obtaining e and d
 Note that (7) $\implies e$ and $d$ are coprime to $\lambda(n)$. Hence, we could obtain $e$ as any positive integer less than $\lambda(n)$ such that $e$ is coprime to $\lambda(n)$. Then, obtain $d$ (i.e. the  modular multiplicative inverse of $e$ modulo $\lambda(n)$) accordingly. Hence we get the public encryption key as $(n, e)$ and the private decryption key as $(n, d)$. Note that $e$ and $d$ can be larger than $n$ if we want, but this would make encryption and decryption more inefficient.
 
 ### Obtaining the ciphertext
