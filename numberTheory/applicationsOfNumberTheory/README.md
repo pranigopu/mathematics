@@ -294,11 +294,11 @@ $m \equiv m \pmod p$ $\dots (2)$
 
 Hence, we get:
 
-$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in \mathbb{Z}_ +$ $\dots (3)$
+$(1), (2) \implies m^{k\lambda(p)+1} \equiv m \pmod p, \forall k \in \mathbb{Z}_+$ $\dots (3)$
 
 Similarly, we get:
 
-$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in \mathbb{Z}_ +$ $\dots (4)$
+$m^{k\lambda(q)+1} \equiv m \pmod q, \forall k \in \mathbb{Z}_+$ $\dots (4)$
 <br><br>
 
 But we have that:
@@ -320,10 +320,10 @@ $\implies pq | (m^{\lambda(n)+1} - m)$
 
 $\implies m^{k\lambda(n)+1} \equiv m \pmod {pq}$
 
-Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in \mathbb{Z}_ +$.
+Hence, for $(m^e)^d \equiv m \pmod n$, we can obtain $ed = k\lambda(n)+1, k \in \mathbb{Z}_+$.
 <br><br>
 
-But $1 < \lambda(n)$ and $1 \in \mathbb{Z}_ +$. Hence, by division algorithm:
+But $1 < \lambda(n)$ and $1 \in \mathbb{Z}_+$. Hence, by division algorithm:
 
 $1 = ed \bmod \lambda(n)$ $\dots (7)$
 
@@ -337,11 +337,11 @@ The encryption will be based made on $e$, but what should the encryption functio
 
 $\implies n | (m^e)^d - m$
 
-$\implies (m^e)^d - m = kn, k \in \mathbb{Z}_ +$
+$\implies (m^e)^d - m = kn, k \in \mathbb{Z}_+$
 
-$\implies (m^e)^d = kn + m, k \in \mathbb{Z}_ +$
+$\implies (m^e)^d = kn + m, k \in \mathbb{Z}_+$
 
-But $m < n$ and $m \in \mathbb{Z}_ +$. Hence, by division algorithm:
+But $m < n$ and $m \in \mathbb{Z}_+$. Hence, by division algorithm:
 
 $m = (m^e)^d \bmod n ... (1)$
 <br><br>
@@ -436,13 +436,13 @@ For our implementation of Caesar cipher in Python, we make the following conside
 Our very first assumption in this implementation is that the message to be coded is in regular English, with special characters or alphabets not being considered as part of the alphabet. Note that Caesar cipher can be designed to suit different languages and use cases.
 <br><br>
 
-Note that we assume that the offset, which we shall denote as $k$, is such that $k \in \mathbb{Z}_ +, k < n$ (assuming we have $n$ possible letters), since due to the circular nature of Caesar cipher, any offset $k \geq n$ can be converted into a functionally identical offset $k \in \mathbb{Z}_ +, k < n$ using modulo $n$ i.e. doing $k_{new}=k_{old} \bmod n$.
+Note that we assume that the offset, which we shall denote as $k$, is such that $k \in \mathbb{Z}_+, k < n$ (assuming we have $n$ possible letters), since due to the circular nature of Caesar cipher, any offset $k \geq n$ can be converted into a functionally identical offset $k \in \mathbb{Z}_+, k < n$ using modulo $n$ i.e. doing $k_{new}=k_{old} \bmod n$.
 <br><br>
 
 Note that due to the very definition of Caesar cipher, we map the letters to be coded and decoded to a fixed set of numerical indices (i.e. natural numbers separated by 1). For example, in regular English alphabets, we may give "a" = 1, "b = 2... "z" = 26. The ASCII values of English alphabets also form a mapping between letters and a fixed set of indices, if we consider uppercase and lowercase alphabets separately. The ASCII values of alphabets are what we will be using in our Python implementation. Non-English alphabets will remain untouched in our algorithm.
 <br><br>
 
-Consider a set of alphabets that are mapped to a fixed set of indices (ASCII values). Define $\alpha$ as the function that returns the index (ASCII value) of an alphabet. Denote any alphabet in the string as $c$, denote as $d$ as the Caesar cipher of $c$, and denote $k \in \mathbb{Z}_ +$ as the offset. For simplicity of explanation, let $c$ be lowercase. Note that the same logic will apply for uppercase too.
+Consider a set of alphabets that are mapped to a fixed set of indices (ASCII values). Define $\alpha$ as the function that returns the index (ASCII value) of an alphabet. Denote any alphabet in the string as $c$, denote as $d$ as the Caesar cipher of $c$, and denote $k \in \mathbb{Z}_+$ as the offset. For simplicity of explanation, let $c$ be lowercase. Note that the same logic will apply for uppercase too.
 
 ### Encoding implementation
 Here, we will aim to obtain $\alpha(d)$ (i.e. the cipher alphabet) in terms of $\alpha(c)$ (i.e. the original alphabet). Now note that, assuming $c$ is a proper alphabet, we have that $\alpha($ "a" $) \leq \alpha(c) \leq \alpha($ "z" $)$.
