@@ -2,7 +2,7 @@
 
 _Project by Pranav Gopalkrishna_
 
-**NOTE**: To see the implementations for each topic, see the `implementations` directory of this repository.
+**NOTE**: To see the implementations for each topic, see [`implementations`](https://github.com/pranigopu/mathematics/tree/main/numberTheory/applicationsOfNumberTheory/implementations).
 
 # Pseudorandom numbers
 ## Random numbers
