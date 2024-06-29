@@ -1,8 +1,65 @@
-# APPLICATIONS OF NUMBER THEORY
+**APPLICATIONS OF NUMBER THEORY**
 
 _Project by Pranav Gopalkrishna_
 
 **NOTE**: To see the implementations for each topic, see [`implementations`](https://github.com/pranigopu/mathematics/tree/main/numberTheory/applicationsOfNumberTheory/implementations).
+
+---
+
+**Contents**:
+
+- [Pseudorandom numbers](#pseudorandom-numbers)
+  - [Random numbers](#random-numbers)
+  - [Pseudorandom numbers](#pseudorandom-numbers-1)
+  - [Pseudorandom number generation (pRNG)](#pseudorandom-number-generation-prng)
+  - [Some applications of pRNG](#some-applications-of-prng)
+    - [Video game encounters](#video-game-encounters)
+    - [End-to-end encryption](#end-to-end-encryption)
+- [Hash function](#hash-function)
+  - [Definition and associated terms}](#definition-and-associated-terms)
+  - [Properties of an ideal hash function](#properties-of-an-ideal-hash-function)
+    - [Non-invertibility](#non-invertibility)
+    - [Collision resistance i.e. one-to-one property](#collision-resistance-ie-one-to-one-property)
+    - [Second pre-image resistance](#second-pre-image-resistance)
+  - [Design and implementation](#design-and-implementation)
+- [Parity bit method](#parity-bit-method)
+  - [Context](#context)
+  - [Definition](#definition)
+  - [Basic parity bit method](#basic-parity-bit-method)
+  - [Hamming code](#hamming-code)
+    - [Some results](#some-results)
+- [Cryptography](#cryptography)
+  - [Definition and associated terms](#definition-and-associated-terms-1)
+    - [Cryptosystem and its components}](#cryptosystem-and-its-components)
+    - [Cryptography classification](#cryptography-classification)
+  - [Private and public keys](#private-and-public-keys)
+    - [Private keys and symmetric cryptography](#private-keys-and-symmetric-cryptography)
+    - [Public keys and asymmetric cryptography](#public-keys-and-asymmetric-cryptography)
+  - [Rivest-Shamir-Adleman algorithm](#rivest-shamir-adleman-algorithm)
+    - [Obtaining the public and private keys](#obtaining-the-public-and-private-keys)
+      - [Introduction to the problem](#introduction-to-the-problem)
+      - [Using the Carmichael function](#using-the-carmichael-function)
+      - [Obtaining $e$ and $d$](#obtaining-e-and-d)
+    - [Obtaining the ciphertext](#obtaining-the-ciphertext)
+    - [Message partitioning](#message-partitioning)
+- [Barcode scanning](#barcode-scanning)
+  - [Barcode definition and purpose](#barcode-definition-and-purpose)
+  - [Barcode components](#barcode-components)
+- [Coding and decoding](#coding-and-decoding)
+  - [Definition and purpose](#definition-and-purpose)
+  - [Caesar cipher](#caesar-cipher)
+    - [Python implementation](#python-implementation)
+      - [Assumptions, definitions and notations](#assumptions-definitions-and-notations)
+    - [Encoding implementation](#encoding-implementation)
+      - [CASE 1: $\\alpha(c)+k \\leq \\alpha($ "z" $)$](#case-1-alphack-leq-alpha-z-)
+      - [CASE 2: $\\alpha(c)+k \> \\alpha($ "z" $)$](#case-2-alphack--alpha-z-)
+    - [Decoding implementation](#decoding-implementation)
+      - [CASE 1: $\\alpha(c)+k \\leq \\alpha($ "z" $)$](#case-1-alphack-leq-alpha-z--1)
+      - [CASE 2: $\\alpha(c)+k \> \\alpha($ "z" $)$](#case-2-alphack--alpha-z--1)
+  - [Randomised or arbitrary one-to-one coding](#randomised-or-arbitrary-one-to-one-coding)
+  - [REFERENCES](#references)
+
+---
 
 # Pseudorandom numbers
 ## Random numbers
