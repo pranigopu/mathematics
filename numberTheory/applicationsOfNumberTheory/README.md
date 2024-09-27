@@ -16,7 +16,7 @@ _Project by Pranav Gopalkrishna_
     - [Video game encounters](#video-game-encounters)
     - [End-to-end encryption](#end-to-end-encryption)
 - [Hash function](#hash-function)
-  - [Definition and associated terms}](#definition-and-associated-terms)
+  - [Definition and associated terms](#definition-and-associated-terms)
   - [Properties of an ideal hash function](#properties-of-an-ideal-hash-function)
     - [Non-invertibility](#non-invertibility)
     - [Collision resistance i.e. one-to-one property](#collision-resistance-ie-one-to-one-property)
@@ -30,7 +30,7 @@ _Project by Pranav Gopalkrishna_
     - [Some results](#some-results)
 - [Cryptography](#cryptography)
   - [Definition and associated terms](#definition-and-associated-terms-1)
-    - [Cryptosystem and its components}](#cryptosystem-and-its-components)
+    - [Cryptosystem and its components](#cryptosystem-and-its-components)
     - [Cryptography classification](#cryptography-classification)
   - [Private and public keys](#private-and-public-keys)
     - [Private keys and symmetric cryptography](#private-keys-and-symmetric-cryptography)
@@ -100,7 +100,7 @@ End-to-end encryption is a method to ensure that data shared between two users' 
 This involves generating a secret key for each message in the sender's and receiver's separately.
 
 # Hash function
-## Definition and associated terms}
+## Definition and associated terms
 A hash function is a function that maps given data of arbitrary size to a single value that has fixed size limit. Applying a hash function on data is called "hashing the data". The return value of a hash function is called a hash value. In some implementations, the hash value is of fixed length.
 <br><br>
 
@@ -182,7 +182,7 @@ We will use this result to insert the right amount of redundant i.e. parity bits
 ## Definition and associated terms
 Cryptography is the study and practice of secure communication techniques wherein the message's contents can only be viewed by the sender(s) and intended receiver(s) (_"kryptos"_ $\implies$ _hidden_). An interceptor is an unauthorised entity who can access the transmitted data (but may not be able to read the message itself).
 
-### Cryptosystem and its components}
+### Cryptosystem and its components
 A cryptosystem (also called cipher system) is an implementation of cryptographic techniques, and involves the accompanying infrastructure. A basic cryptosystem has the following components:
 
 - Plaintext
@@ -265,7 +265,7 @@ If $x$ is prime, $\lambda(x)=x-1$
 
 If $x=p_1^{k_1}p_2^{k_2}...p_r^{k_r}$ (where $\{p_i\}$ are distinct primes), then
 
-$\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r}))$
+$\lambda(x)=LCM(\lambda(p_1^{k_1}),\lambda(p_2^{k_2}...\lambda(p_r^{k_r})))$
 
 ---
 
@@ -526,7 +526,7 @@ Using such information about a language's usage, and knowing the source language
 7. End-to-end encryption:<br>https://support.google.com/messages/answer/10262381?hl=en
 8. Hash function definition:<br>https://www.tutorialspoint.com/cryptography/cryptography_hash_functions.htm
 9. Hash function implementation:<br>https://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html
-10. Hash and Python dictionaries:<br>(https://www.laurentluce.com/posts/python-dictionary-implementation/
+10. Hash and Python dictionaries:<br>https://www.laurentluce.com/posts/python-dictionary-implementation/
 11. Parity bit method:<br>https://www.techtarget.com/searchstorage/definition/parity
 12. Hamming code (parity bit):<br>https://www.geeksforgeeks.org/hamming-code-in-computer-network/
 13. Defining cryptography:<br>https://www.kaspersky.com/resource-center/definitions/what-is-cryptography
