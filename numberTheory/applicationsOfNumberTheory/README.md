@@ -380,7 +380,7 @@ A barcode can contain various useful information in a compact manner. A common u
 
 ## Barcode components
 
-![Barcode components](https://github.com/pranigopu/mathematics/blob/315624261ff886056937bfcaa75baaeb6ca542fe/numberTheory/applicationsOfNumberTheory/barcodeComponents.png)
+![Barcode components](https://github.com/pranigopu/mathematics/blob/main/numberTheory/applicationsOfNumberTheory/barcodeComponents.png)
 
 A quiet zone is blank margin located at both ends of the barcode. The minimum margin space is 2.5 mm. The quiet zone adds a constant reflection at either end of the barcode, allowing the scanner to clearly identify the start and end of a barcode. If the width of a quiet zone is insufficient, barcodes can be hard for a scanner to read. 
 <br><br>
